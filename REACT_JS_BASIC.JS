@@ -205,7 +205,7 @@ console.log(name, age1);
 // ------------------------------- 5 . ternary operator -------------------
 // to allow 18+ only for car racing
 let clientAge = 12;
-let output = clientAge > 18 ? "allowed" : "not allowed";
-console.log(output);
+let output1 = clientAge > 18 ? "allowed" : "not allowed";
+console.log(output1);
 
 //
