@@ -208,4 +208,37 @@ let clientAge = 12;
 let output = clientAge > 18 ? "allowed" : "not allowed";
 console.log(output);
 
-//
+//-------------------------- rest and spreed operator --------------------
+
+// 1.------------ rest operator $$ to get the miltple value at single array
+
+function sum(...numbers) {
+  //  print single array
+  console.log(numbers);
+  let total = 0;
+  for (const nums of numbers) {
+    total += nums;
+  }
+  console.log(total);
+}
+sum(12, 34, 65, 76);
+
+// 2. -------------------- spreed operator  $$ it's clone the array
+
+let arr1 = [1, 3, 4, 5, 7];
+
+//clone the array 1
+let arr2 = [...arr1];
+
+console.log(arr2);
+
+//3. -------------------------------- promise - async and await---------------
+
+// 1.promise is object
+
+let arr0 = ["apple", "orange", "bannan", "graps"];
+let furits0 = "";
+for (let x in arr0) {
+  furits0 += arr[x] + " "; // x is index of arr
+  console.log(furits0);
+}
