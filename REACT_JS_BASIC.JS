@@ -251,6 +251,37 @@ humans
   })
   .catch(() => {
     console.log(`humans are dead`);
+  })
+  .finally(() => {
+    console.log("Published");
   });
-
 // ------------------------------------ async and await ------------------------
+
+// 1. ----------------Async is always return promise---------------------
+
+async function func() {
+  return "hello";
+}
+console.log(func()); // return promise
+func().then((msg) => {
+  console.log(msg);
+});
+
+// 2.-----------------------Await only valid in Async------------------
+
+// promise
+const msg = new Promise((resolve, reject) => {
+  resolve("hello");
+});
+
+async function signal() {
+  x = await msg;
+  console.log(x);
+}
+signal();
+
+// ----------------------------------- fetch API--------------------------
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((res) => res.json())
+  .then((jres) => console.log(jres));
