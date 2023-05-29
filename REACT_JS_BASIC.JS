@@ -232,13 +232,25 @@ let arr2 = [...arr1];
 
 console.log(arr2);
 
-//3. -------------------------------- promise - async and await---------------
+//-------------------------------- promise - async and await---------------
 
 // 1.promise is object
 
-let arr0 = ["apple", "orange", "bannan", "graps"];
-let furits0 = "";
-for (let x in arr0) {
-  furits0 += arr[x] + " "; // x is index of arr
-  console.log(furits0);
-}
+const humans = new Promise((resolve, reject) => {
+  let useralive = false;
+  if (useralive) {
+    resolve();
+  } else {
+    reject();
+  }
+});
+
+humans
+  .then(() => {
+    console.log(`humans are alive`);
+  })
+  .catch(() => {
+    console.log(`humans are dead`);
+  });
+
+// ------------------------------------ async and await ------------------------
